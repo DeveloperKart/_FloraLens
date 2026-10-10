@@ -1,0 +1,1059 @@
+
+/* =========================================
+   1. GLOBAL SETTINGS
+========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26352B;
+    background-color: #FFFFFF;
+    overflow-wrap: break-word;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible {
+    outline: 3px solid #A8BFA2;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   2. NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px 5%;
+    background-color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    background-color: #234B35;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.logo-text {
+    color: #234B35;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    min-width: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #26352B;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #739477;
+}
+
+.nav-button {
+    min-width: 150px;
+    min-height: 44px;
+    padding: 12px 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #234B35;
+    color: #FFFFFF;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #183525;
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 540px;
+    padding: 60px 5%;
+
+    background-color: #F7F7EF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-label {
+    color: #52745B;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+.hero-text h1 {
+    max-width: 550px;
+    color: #234B35;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0 0 24px;
+}
+
+.hero-description {
+    max-width: 500px;
+    color: #526458;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+.hero-button {
+    min-width: 170px;
+    min-height: 50px;
+    padding: 14px 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #234B35;
+    color: #FFFFFF;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 8px;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: #183525;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    background-color: #E0EBDD;
+}
+
+
+/* =========================================
+   4. FEATURES SECTION
+========================================= */
+
+.features {
+    width: 100%;
+    padding: 64px 5%;
+    background-color: #FFFFFF;
+}
+
+.features-heading {
+    text-align: center;
+    margin: 0 auto 36px;
+}
+
+.features-heading h2 {
+    color: #234B35;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+.features-heading p {
+    color: #526458;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    min-width: 0;
+    min-height: 200px;
+    padding: 24px;
+
+    background-color: #F7F7EF;
+    border: 1px solid #E0E7DD;
+    border-radius: 16px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(35, 75, 53, 0.10);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #E0EBDD;
+    color: #234B35;
+
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.feature-card h3 {
+    color: #234B35;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 10px;
+}
+
+.feature-card p {
+    color: #526458;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================
+   5. FEATURED PLANTS
+========================================= */
+
+.featured-plants {
+    width: 100%;
+    padding: 72px 5%;
+    background-color: #F7F7EF;
+}
+
+.plants-heading {
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+.plants-label {
+    color: #52745B;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.plants-heading h2 {
+    color: #234B35;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 14px;
+}
+
+.plants-subtitle {
+    color: #526458;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.plant-card {
+    min-width: 0;
+    overflow: hidden;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E0E7DD;
+    border-radius: 16px;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(35, 75, 53, 0.12);
+}
+
+.plant-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #E0EBDD;
+}
+
+.plant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+.plant-card:hover .plant-image img {
+    transform: scale(1.05);
+}
+
+.plant-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.94);
+    color: #234B35;
+
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.plant-info {
+    padding: 22px;
+}
+
+.plant-category {
+    color: #52745B;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.weed-category {
+    color: #9A7137;
+}
+
+.plant-info h3 {
+    color: #234B35;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 5px;
+}
+
+.plant-scientific {
+    color: #758277;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 14px;
+}
+
+.plant-description {
+    color: #526458;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+
+/* =========================================
+   6. CALL TO ACTION
+========================================= */
+
+.cta-section {
+    width: 100%;
+    padding: 80px 5%;
+    background-color: #FFFFFF;
+}
+
+.cta-content {
+    width: 100%;
+    max-width: 1320px;
+    min-height: 340px;
+    margin: 0 auto;
+    padding: 64px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    background-color: #183525;
+    border-radius: 24px;
+}
+
+.cta-label {
+    color: #A8BFA2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+.cta-content h2 {
+    max-width: 700px;
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.cta-description {
+    max-width: 580px;
+    color: #E0EBDD;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 28px;
+}
+
+.cta-button {
+    min-width: 190px;
+    min-height: 52px;
+    padding: 15px 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: #FFFFFF;
+    color: #234B35;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #E0EBDD;
+    transform: translateY(-3px);
+}
+
+.cta-note {
+    color: #A8BFA2;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 22px 0 0;
+}
+
+
+/* =========================================
+   7. FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+    padding: 56px 5% 0;
+
+    background-color: #183525;
+    color: #FFFFFF;
+}
+
+.footer-main {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+}
+
+.footer-brand {
+    min-width: 0;
+    max-width: 360px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #E0EBDD;
+    border-radius: 10px;
+    font-size: 23px;
+}
+
+.footer-description {
+    max-width: 320px;
+    margin: 18px 0 0;
+
+    color: #C8D7C4;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.footer-links h3 {
+    margin: 4px 0 6px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-links a {
+    color: #C8D7C4;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1320px;
+    min-height: 70px;
+    margin: 0 auto;
+
+    border-top: 1px solid #45634C;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #A8BFA2;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   8. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1100px) {
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 16px;
+    }
+
+    .nav-right {
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .features-grid,
+    .plants-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .footer-main {
+        gap: 28px;
+    }
+}
+
+
+/* =========================================
+   9. NAVBAR AND HERO SMALL SCREENS
+========================================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 6%;
+        gap: 18px;
+    }
+
+    .nav-right {
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        min-height: 42px;
+    }
+
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 48px 6%;
+        gap: 32px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        max-width: 600px;
+        font-size: clamp(36px, 7vw, 46px);
+        letter-spacing: -0.8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        flex: none;
+        position: static;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 300px;
+        border-radius: 16px;
+    }
+
+    .features {
+        padding: 48px 6%;
+    }
+
+    .featured-plants {
+        padding: 52px 6%;
+    }
+
+    .cta-section {
+        padding: 48px 6%;
+    }
+
+    .cta-content {
+        min-height: 0;
+        padding: 48px 24px;
+        border-radius: 18px;
+    }
+
+    .cta-content h2 {
+        font-size: 34px;
+    }
+
+    .footer {
+        padding: 42px 6% 0;
+    }
+
+    .footer-main {
+        gap: 32px 24px;
+        padding-bottom: 32px;
+    }
+}
+
+
+/* =========================================
+   10. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px 16px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 40px 6%;
+        gap: 28px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 1.2px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(32px, 9vw, 40px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-image img {
+        height: 240px;
+    }
+
+    .features {
+        padding: 44px 6%;
+    }
+
+    .features-heading {
+        margin-bottom: 28px;
+    }
+
+    .features-heading h2 {
+        font-size: 28px;
+    }
+
+    .features-heading p {
+        font-size: 14px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        min-height: 170px;
+        padding: 20px;
+    }
+
+    .featured-plants {
+        padding: 44px 6%;
+    }
+
+    .plants-heading {
+        margin-bottom: 28px;
+    }
+
+    .plants-heading h2 {
+        font-size: 29px;
+    }
+
+    .plants-subtitle {
+        font-size: 14px;
+    }
+
+    .plants-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .plant-image {
+        height: 240px;
+    }
+
+    .plant-info {
+        padding: 20px;
+    }
+
+    .cta-section {
+        padding: 40px 6%;
+    }
+
+    .cta-content {
+        padding: 42px 20px;
+    }
+
+    .cta-label {
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+
+    .cta-content h2 {
+        font-size: 30px;
+    }
+
+    .cta-description {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+
+    .footer-description {
+        max-width: 360px;
+    }
+
+    .footer-bottom {
+        padding: 18px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+
+/* =========================================
+   11. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Shared FloraLens typography */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3,
+.logo-text,
+button,
+.nav-button {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* FloraLens scanner page — matching the home page */
+body {
+    background: #F7F7EF;
+    color: #26352B;
+}
+
+.scanner-main {
+    width: min(92%, 1100px);
+    margin: 42px auto 64px;
+}
+
+.scanner-panel {
+    background: #FFFFFF;
+    border: 1px solid #E0E7DD;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(35, 75, 53, 0.06);
+}
+
+.scanner-panel h2 {
+    color: #234B35;
+}
+
+#camera {
+    width: 100%;
+    min-height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #E0EBDD;
+    border-radius: 14px;
+}
+
+#camera canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#result {
+    color: #234B35;
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+#details {
+    line-height: 1.8;
+    color: #526458;
+}
+
+button {
+    border-radius: 8px;
+}
+
+footer {
+    background: #FFFFFF;
+    border-top: 1px solid #E0E7DD;
+    color: #526458;
+}
